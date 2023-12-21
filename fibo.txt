@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Posición en la secuencia de Fibonacci</title>
+</head>
+<body>
+  <form id="fibonacciForm">
+    <label for="number">Ingrese un número:</label>
+    <input type="number" id="number" name="number" required>
+    <button type="submit">Calcular posición</button>
+  </form>
+
+  <p>La posición del número en la secuencia de Fibonacci es: <span id="result"></span></p>
+
+  <script>
+    // Función para calcular la posición del número en la secuencia de Fibonacci
+    function findFibonacciPosition(number) {
+      if (number === 0) return 0;
+      
+      let a = 0;
+      let b = 1;
+      let count = 1;
+
+      while (b <= number) {
+        if (b === number) {
+          return count;
+        }
+        let temp = b;
+        b = a + b;
+        a = temp;
+        count++;
+      }
+
+      return -1; // Si el número no está en la secuencia de Fibonacci
+    }
+
+    // Manejo del formulario
+    document.getElementById('fibonacciForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const number = parseInt(document.getElementById('number').value);
+      const position = findFibonacciPosition(number);
+      document.getElementById('result').textContent = position !== -1 ? position : "El número no está en la secuencia de Fibonacci";
+    });
+  </script>
+</body>
+</html>
