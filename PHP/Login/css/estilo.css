@@ -1,0 +1,55 @@
+
+body{
+    background-color:rgb(254, 255, 240);
+    
+
+
+}
+header{
+    position: relative;
+    margin: auto; 
+    width: 100%;
+    
+}
+
+nav{
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: auto;
+    background-color: brown;
+}
+
+nav ul{
+    position: relative;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: auto;
+    width: 23%;
+    line-height: 50px;
+    list-style: none;
+    color: azure;
+}
+
+nav ul li a{
+    color: azure;
+    text-decoration: none;
+}
+
+footer{
+    background-color:black;
+    color: azure;
+    text-align: center;
+    font-size: medium;
+}
+
+.texto{
+
+    color: slategrey;
+
+}
